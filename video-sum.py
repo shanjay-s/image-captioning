@@ -310,7 +310,7 @@ tokenizer = tf.keras.preprocessing.text.Tokenizer(num_words=top_k,
                                                   filters='!"#$%&()*+.,-/:;=?@[\]^_`{|}~ ')
 
 
-pickle_in = open("train_captions_1024.pkl","rb")
+pickle_in = open("capt/train_captions_1024.pkl","rb")
 train_captions = pickle.load(pickle_in)
 train_seqs = tokenizer.texts_to_sequences(train_captions)
 tokenizer.fit_on_texts(train_captions)
